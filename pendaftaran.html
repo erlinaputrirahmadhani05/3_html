@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Halaman HTML Erlina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <style>
+    body {
+      font-family: 'Times New Roman';
+    }
+  </style>
+  <body>
+    <div id="content">
+      <form method="post" action="proses.php"></form>
+      <fieldset> 
+          <legend>Informasi Pribadi</legend>
+          <br>
+
+            <label for="username"> Nama </label> 
+            <input type="text" id="username" name="username"> <br>
+            <br>
+
+            <label for="ph"> No. Telepone</label>
+            <input type="tel" id="ph" name="phone" pattern="[0-9]{4}-[[0-9]{6}"><br>
+            <br>
+
+            <label for="email">Alamat Email </label>
+            <input type="email" id="email" name="email"> <br>
+            <br>
+
+            <label for="b">Tanggal Lahir </label>
+            <input type="date" id="b" name="tanggal"> <br>
+            <br>
+        </fieldset>
+        </form>
+
+        <fieldset> 
+            <legend>Permintaan Pertemuan</legend>
+            <br>
+
+            <label for="tujuan"> Tujuan Pertemuan </label> 
+            <input type="text" id="tujuan" name="tujuan"> <br>
+            <br>
+
+            <label for="vol"> Tingkat Kepentingan Pertemuan</label>
+            <input type="range" id="vol" name="vol" min="0" max="50"> <br>
+            <br>
+
+            <label for="b">Tanggal </label>
+            <input type="date" id="b" name="tanggal"> <br>
+            <br>
+
+            <label for="appt">Select a time:</label>
+            <input type="time" id="appt" name="appt"> <br>
+
+        </fieldset>
+      </div>
+  </body>
+</html>
