@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <title>Halaman HTML Erlina</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/main.css" />
+    <meta name="author" content="Erlina Putri">
+    <meta name="nim" content="233307046">
   </head>
   <style>
     body {
@@ -12,29 +13,30 @@
     }
   </style>
   <body>
-    <div id="content">
-      <form method="post" action="proses.php"></form>
+    <h1>From Penjadwalan Pertemuan</h1>
+    <div>
+      <form action="proses.php" method="get"></form>
       <fieldset> 
-          <legend>Informasi Pribadi</legend>
-          <br>
+            <legend>Informasi Pribadi</legend>
+            <br>
 
             <label for="username"> Nama </label> 
             <input type="text" id="username" name="username"> <br>
             <br>
 
             <label for="ph"> No. Telepone</label>
-            <input type="tel" id="ph" name="phone" pattern="[0-9]{4}-[[0-9]{6}"><br>
+            <input type="tel" id="ph" name="phone" pattern="^0[0-9]{11}$" required><br>
             <br>
 
             <label for="email">Alamat Email </label>
-            <input type="email" id="email" name="email"> <br>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> <br>
             <br>
 
             <label for="b">Tanggal Lahir </label>
-            <input type="date" id="b" name="tanggal"> <br>
+            <input type="date" id="b" name="tanggal" min="1987-01-01" max="1993-01-01" required> <br>
             <br>
         </fieldset>
-        </form>
+       
 
         <fieldset> 
             <legend>Permintaan Pertemuan</legend>
@@ -45,17 +47,18 @@
             <br>
 
             <label for="vol"> Tingkat Kepentingan Pertemuan</label>
-            <input type="range" id="vol" name="vol" min="0" max="50"> <br>
+            <input type="range" id="vol" name="vol" min="0" max="10"> <br>
             <br>
 
             <label for="b">Tanggal </label>
-            <input type="date" id="b" name="tanggal"> <br>
+            <input type="date" id="b" name="tanggal" required> <br>
             <br>
 
             <label for="appt">Select a time:</label>
-            <input type="time" id="appt" name="appt"> <br>
+            <input type="time" id="appt" name="appt" required> <br>
 
         </fieldset>
-      </div>
+        <br> <input type="submit" value="Submit"/>
+    </div>
   </body>
 </html>
